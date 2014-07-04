@@ -1,0 +1,84 @@
+extends layout
+
+block content
+  <!-- Header -->
+  #header 
+    h1(id='logo'): a(href='#') Mike Perry
+    #nav
+      ul
+        li: a(href='#intro') Intro
+        li: a(href='#one') What I Do
+        li: a(href='#two') Who I Am
+        li: a(href='#work') My Work
+        li: a(href='#contact') Contact
+        li: a(href='#blog') Blog
+  section(id='intro' class='main style1 dark fullscreen')
+    div(class='content container small')
+      header
+        h2='Hey.'
+      p='Welcome to my site'
+      footer: a(href='#one' class='button style2 down')
+
+  <!-- One -->
+  section(id='one', class='main style2 right dark fullscreen')
+    div(class='content box style2')
+      header: h2='What I Do'
+      p='Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas consectetur magna urna.'
+    a(href='#two', class='button style2 down anchored')= 'Next'
+
+  <!-- Two -->
+  section(id='two', class='main style2 left dark fullscreen')
+    div(class='content box style2')
+      header
+        h2='Who I Am'
+        p='Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas consectetur magna urna.'
+    a(href='#work', class='button style2 down anchored')='Next'
+
+  <!-- Work -->
+  section(id='work', class='main style3 primary')
+    div(class='content container')
+      header
+        h2='My Work'
+        p='Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas consectetur magna urna.'
+
+        //Lightbox Gallery Powered by poptrox. Full docs here: https://github.com/n33/jquery.poptrox
+          
+      div(class='container small gallery')
+        div(class='row flush images')
+          div(class='6u'): a(href='images/fulls/01.jpg', class='image full l'): img(src='/images/thumbs/01.jpg', title='The Anonymous Red', alt='')
+          div(class='6u'): a(href='images/fulls/02.jpg', class='image full r'): img(src='/images/thumbs/02.jpg', title='The Anonymous Red', alt='')
+        div(class='row flush images')
+          div(class='6u'): a(href='images/fulls/03.jpg', class='image full l'): img(src='/images/thumbs/03.jpg', title='The Anonymous Red', alt='')
+          div(class='6u'): a(href='images/fulls/04.jpg', class='image full r'): img(src='/images/thumbs/04.jpg', title='The Anonymous Red', alt='')
+        div(class='row flush images')
+          div(class='6u'): a(href='images/fulls/05.jpg', class='image full l'): img(src='/images/thumbs/05.jpg', title='The Anonymous Red', alt='')
+          div(class='6u'): a(href='images/fulls/06.jpg', class='image full r'): img(src='/images/thumbs/06.jpg', title='The Anonymous Red', alt='')
+
+
+  <!-- Contact -->
+  section(id='contact', class='main style3 secondary')
+    div(class='content container')
+      header
+        h2='Say Hello.'
+        p='Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.'
+      div(class='box container small')
+        form(method='POST', action='#')
+          div(class='row half')
+            div(class='6u'): input(type='text', name='name', placeholder='Name')
+            div(class='6u'): input(type='text', name='email', placeholder='Email')
+          div(class='row half')
+            div(class='12u'): textarea(name='message', placeholder='Message', rows='6')
+          div(class='row')
+            div(class='12u')
+              ul(class='actions')
+                li: input(type='submit', class='button', value='Send Message')
+
+  #footer
+    <!-- Social Icons -->
+    ul(class='actions')
+      li: a(href='https://github.com/perryao', class='fa solo fa-github'): span='GitHub'
+      li: a(href='https://twitter.com/MikePerry14', class='fa solo fa-twitter'): span='Twitter'
+      li: a(href='https://www.facebook.com/anthonymichaelperry', class='fa solo fa-facebook'): span='Facebook'
+      li: a(href='https://plus.google.com/+AnthonyPerry14/', class='fa solo fa-google-plus'): span='Google+'
+      li: a(href='http://instagram.com/mikeperry14', class='fa solo fa-instagram'): span='Instagram'
+      li: a(href='https://twitter.com/MikePerry14', class='fa solo fa-linkedin'): span='LinkedIn'
