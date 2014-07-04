@@ -12,7 +12,6 @@ var path = require('path');
 var app = express();
 
 // all environments
-//app.set('port', process.env.PORT || 3000);
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 3000); 
 app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
 app.set('views', path.join(__dirname, 'views'));
